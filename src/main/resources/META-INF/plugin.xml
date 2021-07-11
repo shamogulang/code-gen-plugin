@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>cn.oddworld.code-gen</id>
+    <name>code-gen</name>
+    <vendor email="2623768443@qq.com" url="no url">oddwolrd</vendor>
+
+    <description>用于生成对应的mybatis的代码，包括entity,mapper,xmlMapper和repository</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="code-gen" class="cn.oddworld.CodeGen" text="CodeGen" description="生成代码">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl G"/>
+        </action>
+    </actions>
+</idea-plugin>
